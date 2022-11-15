@@ -2,7 +2,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 
-export default function Balance({  saldo, gastos}) {
+export default function Balance({ saldo, gastos}) {
  return (
     <View style={styles.container}>
         <View style={styles.item}>
@@ -10,20 +10,9 @@ export default function Balance({  saldo, gastos}) {
             <Text style={styles.itemTittle}>Saldo</Text>
                 
             <View style={styles.content}>
-                <Text style={styles.currentSymbol}>R$.: </Text>
+                <Text style={styles.currentSymbol}>R$ </Text>
                 <Text style={styles.creditos}>{saldo}</Text>
             </View>
-
-        </View>
-        <View style={styles.item}>
-
-            <Text style={styles.itemTittle}>Gastos</Text>
-                
-            <View style={styles.content}>
-                <Text style={styles.currentSymbol}>R$.: </Text>
-                <Text style={styles.despesas}>{gastos}</Text>
-            </View>
-
         </View>
     </View>
   );
@@ -45,9 +34,13 @@ const styles = StyleSheet.create({
         paddingBotton: 22,
         zIndex: 99,
     },
-    item:{
 
+    item:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        width: '100%',
     },
+
     itemTittle:{
         fontSize: 20,
         color: '#888',
@@ -73,6 +66,5 @@ const styles = StyleSheet.create({
     despesas:{
         fontSize: 22,
         color: '#e74c3c'
-    }
-
+    },
 })

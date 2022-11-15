@@ -12,7 +12,7 @@ export default function Moviments({ data }) {
             <View style={styles.content}>
                 <Text style={styles.label}>{data.label}</Text>
                 { showValue ? (
-                    <Text style={data.type === 1 ? styles.value : styles.despesas}>{data.type === 1 ? `R$.: ${data.value}` : `-R$.: ${data.value}`}</Text>
+                    <Text style={data.type === 1 ? styles.value : styles.despesas}>{data.type === 1 ? `R$ ${data.value}` : `-R$ ${data.value}`}</Text>
                 ) : (    
                     <View style={styles.skeleton}>
                         <Feather name="eye" size={18} color="#888"/>             
